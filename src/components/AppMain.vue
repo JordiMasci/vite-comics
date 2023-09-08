@@ -25,7 +25,7 @@ export default {
         },
         {
           text: "DC POWER VISA",
-          image: "/img/buy-comics-digital-comics.png",
+          image: "/img/buy-dc-power-visa.svg",
           url: "#",
         },
       ],
@@ -40,10 +40,10 @@ export default {
   </main>
   <div class="container">
     <div class="marchi">
-      <div class="flex">
-        <img src="/img/buy-comics-digital-comics.png" alt="" />
-        <p v-for="marchio in marchi" :key="marchio.url">
-            {{ marchio.text }}
+      <div class="flex" v-for="marchio in marchi" :key="marchio.url">
+        <img :src="marchio.image" alt="" />
+        <p>
+          {{ marchio.text }}
         </p>
       </div>
     </div>
@@ -73,20 +73,23 @@ main {
   .marchi {
     max-width: 1200px;
     margin: 0 auto;
+    height: 100%;
+    justify-content: space-around;
 
     display: flex;
 
     .flex {
-        display: flex;
-        align-items: center;
+      display: flex;
+      align-items: center;
 
-        img {
-            width: auto;
-        }
+      img {
+        width: 50px;
+      }
 
-        p{
-            margin: 0.5rem;
-        }
+      p {
+        margin: 0.5rem;
+        color: white;
+      }
     }
   }
 }
