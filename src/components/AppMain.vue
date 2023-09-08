@@ -52,8 +52,8 @@ export default {
 
 <style lang="scss" scoped>
 main {
-  height: 107px;
-  line-height: 107px;
+  height: 150px;
+  line-height: 150px;
   background-color: black;
 
   div {
@@ -62,12 +62,12 @@ main {
   }
   .contents {
     color: white;
-    font-size: 24px;
+    font-size: 30px;
   }
 }
 
 .container {
-  height: 135px;
+  height: 170px;
   background-color: #0282f9;
 
   .marchi {
