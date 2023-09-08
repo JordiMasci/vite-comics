@@ -61,6 +61,10 @@ export default {
 
 <template>
   <header>
+    <div>
+      <img src="/img/dc-logo.png" alt="" />
+    </div>
+
     <ul>
       <li v-for="link in links">
         <a :href="link.url" :class="link.current ? 'active' : ''">
@@ -72,18 +76,37 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-    
+header {
+  max-width: 1200px;
+  margin: 1rem auto;
+
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    align-items: center;
+
     li {
-        list-style: none;
+      list-style: none;
+      padding: 0.5rem;
 
-        a {
-            color: black;
-            text-decoration: none;
+      a {
+        color: black;
+        text-decoration: none;
+        font-family: fantasy;
 
-        }
-        .active {
+        &:hover {
             color: blue;
-            border-bottom: 2px solid blue;
         }
+
+       
+      }
+      .active {
+        color: blue;
+        border-bottom: 2px solid blue;
+      }
     }
+  }
+}
 </style>
