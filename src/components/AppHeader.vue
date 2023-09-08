@@ -62,9 +62,28 @@ export default {
 <template>
   <header>
     <ul>
-      <li></li>
+      <li v-for="link in links">
+        <a :href="link.url" :class="link.current ? 'active' : ''">
+          {{ link.text }}
+        </a>
+      </li>
     </ul>
   </header>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+    
+    li {
+        list-style: none;
+
+        a {
+            color: black;
+            text-decoration: none;
+
+        }
+        .active {
+            color: blue;
+            border-bottom: 2px solid blue;
+        }
+    }
+</style>
