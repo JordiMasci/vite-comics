@@ -66,7 +66,7 @@ export default {
     </div>
 
     <ul>
-      <li v-for="link in links">
+      <li v-for="link in links" :key="link.url"> 
         <a :href="link.url" :class="link.current ? 'active' : ''">
           {{ link.text }}
         </a>
@@ -77,6 +77,9 @@ export default {
 
 <style lang="scss" scoped>
 header {
+  max-width: 1200px;
+  margin: 1rem auto;
+
   display: flex;
   justify-content: space-between;
 
@@ -94,10 +97,8 @@ header {
         font-family: fantasy;
 
         &:hover {
-            color: blue;
+          color: blue;
         }
-
-       
       }
       .active {
         color: blue;
