@@ -1,10 +1,37 @@
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      loghi: [
+        {
+          image: "/img/footer-facebook.png",
+          url: "#",
+        },
+        {
+          image: "/img/footer-twitter.png",
+          url: "#",
+        },
+        {
+          image: "/img/footer-youtube.png",
+          url: "#",
+        },
+        {
+          image: "/img/footer-pinterest.png",
+          url: "#",
+        },
+        {
+          image: "/img/footer-periscope.png",
+          url: "#",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <template>
   <footer>
-    <div class="container">
+    <div class="container div-container">
       <div></div>
       <div></div>
       <div></div>
@@ -16,7 +43,9 @@ export default {};
       <button>SIGN-UP NOW!</button>
       <div class="loghi">
         <p>FOLLOW US</p>
-        <img src="/img/footer-facebook.png" alt="" />
+        <div v-for="logo in loghi" :key="logo.url">
+          <img :src="logo.image" alt="" />
+        </div>
       </div>
     </div>
   </div>
@@ -25,8 +54,21 @@ export default {};
 <style lang="scss" scoped>
 // PRIMA PARTE FOOTER
 footer {
-  height: 500px;
+  position: relative;
+  height: 400px;
   background-image: url("./img/footer-bg.jpg");
+
+  .div-container {
+    position: absolute;
+    background-image: url("./img/dc-logo-bg.png");
+    background-repeat: no-repeat;
+    background-position: 750px -50px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
 }
 
 // SECONDA PARTE FOOTER
@@ -50,7 +92,20 @@ footer {
     }
 
     .loghi {
-        display: flex;
+      display: flex;
+      align-items: center;
+
+      p {
+        margin: 0 15px;
+        color: blue;
+        font-size: 20px;
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+        margin: 0 10px;
+      }
     }
   }
 }
