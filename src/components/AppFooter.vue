@@ -31,10 +31,52 @@ export default {
 
 <template>
   <footer>
-    <div class="container div-container">
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="div-container">
+      <div class="container">
+        <div>
+          <h3>DC COMICS</h3>
+          <ul>
+            <li>Characters</li>
+            <li>Comics</li>
+            <li>Movies</li>
+            <li>Tv</li>
+            <li>Games</li>
+            <li>Videos</li>
+            <li>News</li>
+          </ul>
+          <h3>SHOP</h3>
+          <ul>
+            <li>Shop DC</li>
+            <li>Shop DC Collectibles</li>
+          </ul>
+        </div>
+        <div>
+          <h3>DC</h3>
+          <ul>
+            <li>Term Of Use</li>
+            <li>Privacy Policy (News)</li>
+            <li>Ad Choises</li>
+            <li>Advertising</li>
+            <li>Jobs</li>
+            <li>Subscriptions</li>
+            <li>Talent Whork Shop</li>
+            <li>CPSC Certificates</li>
+            <li>Ratings</li>
+            <li>Shop Help</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+        <div>
+          <h3>SITES</h3>
+          <ul>
+            <li>DC</li>
+            <li>Mad Magazine</li>
+            <li>DC Kids</li>
+            <li>DC Universe</li>
+            <li>DC Power Visa</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </footer>
 
@@ -57,6 +99,33 @@ footer {
   position: relative;
   height: 400px;
   background-image: url("./img/footer-bg.jpg");
+
+  .container {
+    display: flex;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+
+    div {
+      margin-right: 50px;
+    }
+
+    h3 {
+      color: white;
+      font-size: 25px;
+    }
+
+    ul {
+      padding-inline-start: 0;
+
+      li {
+        color: #817a7a;
+        list-style: none;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+    }
+  }
 
   .div-container {
     position: absolute;
