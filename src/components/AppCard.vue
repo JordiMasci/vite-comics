@@ -1,48 +1,29 @@
 <script>
 export default {
-
   props: {
-    files: {
-      type: Array,
+    card: {
+      type: Object,
     },
   },
 };
 </script>
 
 <template>
-  <div class="container">
-    <div class="card-container">
-      <div class="card" v-for="(file, index) in files" :key="index">
-        <img :src="file.thumb" alt="" />
-        <h3 class="title">{{ file.series }}</h3>
-      </div>
-    </div>
+  <div class="card">
+    <img :src="card.thumb" alt="" />
+    <h3 class="title">{{ card.series }}</h3>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.container {
-  background-color: #1c1c1c;
-  .card-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    min-height: 200px;
+.card {
+  width: calc(100% / 6);
 
-    display: flex;
-    flex-wrap: wrap;
+  color: white;
 
-    .card {
-      width: 16%;
-      min-height: 200px;
-      border: 2px solid red;
-
-      gap: 1%;
-      color: white;
-
-      img {
-        max-width: 100%;
-      }
-    }
+  img {
+    max-width: 100%;
+    height: 281px;
   }
 }
 </style>
