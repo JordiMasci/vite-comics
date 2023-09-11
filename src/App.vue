@@ -12,9 +12,9 @@ export default {
 
 <template>
   <AppHeader />
+  <AppCard />
   <AppMain />
   <AppFooter />
-  <AppCard />
 </template>
 
 <style lang="scss">
