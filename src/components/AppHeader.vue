@@ -1,5 +1,5 @@
 <script>
-import AppCard from "./components/AppCard.vue";
+import AppCard from "./AppCard.vue";
 
 export default {
   components: { AppCard },
