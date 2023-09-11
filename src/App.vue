@@ -2,9 +2,11 @@
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
 import AppFooter from "./components/AppFooter.vue";
+import AppCard from "./components/AppCard.vue";
+
 
 export default {
-  components: { AppHeader, AppMain, AppFooter},
+  components: { AppHeader, AppMain, AppFooter, AppCard},
 };
 </script>
 
@@ -12,6 +14,7 @@ export default {
   <AppHeader />
   <AppMain />
   <AppFooter />
+  <AppCard />
 </template>
 
 <style lang="scss">
