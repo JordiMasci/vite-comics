@@ -4,9 +4,8 @@ import AppMain from "./components/AppMain.vue";
 import AppFooter from "./components/AppFooter.vue";
 import AppCard from "./components/AppCard.vue";
 
-
 export default {
-  components: { AppHeader, AppMain, AppFooter, AppCard},
+  components: { AppHeader, AppMain, AppFooter, AppCard },
 };
 </script>
 
